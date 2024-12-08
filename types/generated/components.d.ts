@@ -11,6 +11,17 @@ export interface FeaturesRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface FeaturesSlider extends Struct.ComponentSchema {
+  collectionName: 'components_features_sliders';
+  info: {
+    displayName: 'slider';
+    icon: 'car';
+  };
+  attributes: {
+    slide_image: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
 export interface FeaturesSpoiler extends Struct.ComponentSchema {
   collectionName: 'components_features_spoilers';
   info: {
@@ -42,6 +53,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'features.rich-text': FeaturesRichText;
+      'features.slider': FeaturesSlider;
       'features.spoiler': FeaturesSpoiler;
       'features.testimonial': FeaturesTestimonial;
     }

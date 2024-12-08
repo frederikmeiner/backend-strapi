@@ -408,7 +408,12 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   };
   attributes: {
     bodyContent: Schema.Attribute.DynamicZone<
-      ['features.testimonial', 'features.spoiler', 'features.rich-text']
+      [
+        'features.testimonial',
+        'features.spoiler',
+        'features.rich-text',
+        'features.slider',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

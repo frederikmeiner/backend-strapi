@@ -39,7 +39,8 @@
       "components": [
         "features.testimonial",
         "features.spoiler",
-        "features.rich-text"
+        "features.rich-text",
+        "features.slider"
       ]
     }
   }
