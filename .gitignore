@@ -1,131 +1,45 @@
-############################
-# OS X
-############################
+# Beskyt følsomme data
+.env
+.env.local
+.env.production
 
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-.Spotlight-V100
-.Trashes
-._*
+# Beskyt følsomme Strapi-filer
+.strapi-updater.json
+.strapi-cloud.json
 
-
-############################
-# Linux
-############################
-
-*~
-
-
-############################
-# Windows
-############################
-
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-
-
-############################
-# Packages
-############################
-
-*.7z
-*.csv
-*.dat
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.seed
-*.so
-*.swo
-*.swp
-*.swn
-*.swm
-*.out
-*.pid
-
-
-############################
-# Logs and databases
-############################
-
-.tmp
-*.log
-*.sql
+# Beskyt data
 *.sqlite
 *.sqlite3
 
+# Tillad .tmp/data.db
+!/.tmp/data.db
 
-############################
-# Misc.
-############################
-
-*#
-ssl
-.idea
-nbproject
-public/uploads/*
-!public/uploads/.gitkeep
-.tsbuildinfo
-.eslintcache
-
-############################
-# Node.js
-############################
-
-lib-cov
-lcov.info
-pids
-logs
-results
-node_modules
-.node_history
-
-############################
-# Package managers
-############################
-
-.yarn/*
-!.yarn/cache
-!.yarn/unplugged
-!.yarn/patches
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-yarn-error.log
-
-############################
-# Tests
-############################
-
-coverage
-
-############################
-# Strapi
-############################
-
-.env
-license.txt
-exports
-.strapi
+# Beskyt build og logs
 dist
 build
-.strapi-updater.json
-.strapi-cloud.json
+.tmp # ekskluder tmp, men vi tilføjer en undtagelse for data.db
+!.tmp/data.db
+logs
+*.log
+
+# Beskyt npm/yarn
+node_modules
+.yarn/*
+.pnp.*
+
+# Beskyt VSCode og IDE-filer
+.vscode/
+.idea/
+nbproject/
+
+# Beskyt uploads
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Tillad vigtige Strapi-filer
+!.tmp/data.db
+!.strapi-cloud.json
+!.strapi-updater.json
+
+# Tillad src/components/features/slider.json
+!src/components/features/*.json
