@@ -15,10 +15,13 @@ export interface FeaturesSlider extends Struct.ComponentSchema {
   collectionName: 'components_features_sliders';
   info: {
     displayName: 'slider';
-    icon: 'car';
+    icon: 'brush';
   };
   attributes: {
-    slide_image: Schema.Attribute.Media<'images' | 'files', true>;
+    slide_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 

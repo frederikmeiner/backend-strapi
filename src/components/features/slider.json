@@ -2,14 +2,16 @@
   "collectionName": "components_features_sliders",
   "info": {
     "displayName": "slider",
-    "icon": "car"
+    "icon": "brush"
   },
   "options": {},
   "attributes": {
     "slide_image": {
       "allowedTypes": [
         "images",
-        "files"
+        "files",
+        "videos",
+        "audios"
       ],
       "type": "media",
       "multiple": true
